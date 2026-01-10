@@ -1,0 +1,22 @@
+site_name: MA2221 — Foundational Mathematics for Machine Learning
+
+theme:
+  name: material
+  logo: assets/MFML_logo.png
+  favicon: assets/MFML_logo.png
+  palette:
+    scheme: default
+    primary: indigo
+    accent: blue
+
+nav:
+  - Lectures: index.md
+  - Syllabus: syllabus.md
+  - Tutorials: tutorials.md
+  - Codes: codes.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
