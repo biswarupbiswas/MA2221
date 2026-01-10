@@ -1,0 +1,52 @@
+/* 1. Global Font Scaling - Back to standard readable sizes */
+:root {
+    --md-text-font-size: 0.85rem;      
+    --md-code-font-size: 0.8rem;
+}
+
+/* 2. Info Blocks (Admonitions) - Clean and compact */
+.md-typeset .admonition, 
+.md-typeset details {
+    font-size: 0.85rem;               
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.md-typeset .admonition-title {
+    font-size: 0.9rem;               
+    font-weight: 700;
+}
+
+/* 3. Tables - Standard size with better spacing */
+.md-typeset table:not([class]) {
+    font-size: 0.85rem !important;    
+    display: table;
+    width: 100%;
+}
+
+.md-typeset th {
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: rgba(63, 81, 181, 0.05); 
+    padding: 10px;
+}
+
+.md-typeset td {
+    padding: 12px 10px;
+    vertical-align: top;
+}
+
+/* 4. The "Topic" Style - Bold but not huge */
+.md-typeset td strong {
+    font-size: 0.95rem; 
+    color: var(--md-primary-fg-color);
+}
+
+/* 5. Sub-text (small tag) */
+.md-typeset small {
+    font-size: 0.75rem;              
+    color: #666;
+    display: block;
+    margin-top: 2px;
+}
