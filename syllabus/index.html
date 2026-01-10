@@ -1,0 +1,854 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tutorials/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/MFML_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Syllabus - MA2221 — Foundational Mathematics for Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mathematics-for-machine-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MA2221 — Foundational Mathematics for Machine Learning" class="md-header__button md-logo" aria-label="MA2221 — Foundational Mathematics for Machine Learning" data-md-component="logo">
+      
+  <img src="../assets/MFML_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MA2221 — Foundational Mathematics for Machine Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Syllabus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MA2221 — Foundational Mathematics for Machine Learning" class="md-nav__button md-logo" aria-label="MA2221 — Foundational Mathematics for Machine Learning" data-md-component="logo">
+      
+  <img src="../assets/MFML_logo.png" alt="logo">
+
+    </a>
+    MA2221 — Foundational Mathematics for Machine Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-mathematical-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART I — Mathematical Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART I — Mathematical Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1 — Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-2-linear-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2 — Linear Algebra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-3-analytic-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3 — Analytic Geometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-4-matrix-decompositions-chapter-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4 — Matrix Decompositions (Chapter 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-5-vector-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5 — Vector Calculus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-6-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6 — Probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-core-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART II — Core Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART II — Core Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-7-when-models-meet-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7 — When Models Meet Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-8-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8 — Linear Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-9-principal-component-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 9 — Principal Component Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-10-gaussian-mixture-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 10 — Gaussian Mixture Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-11-support-vector-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 11 — Support Vector Machines
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-i-mathematical-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART I — Mathematical Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART I — Mathematical Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1 — Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-2-linear-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2 — Linear Algebra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-3-analytic-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3 — Analytic Geometry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-4-matrix-decompositions-chapter-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4 — Matrix Decompositions (Chapter 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-5-vector-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5 — Vector Calculus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-6-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6 — Probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-ii-core-machine-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PART II — Core Machine Learning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PART II — Core Machine Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-7-when-models-meet-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7 — When Models Meet Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-8-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8 — Linear Regression
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-9-principal-component-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 9 — Principal Component Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-10-gaussian-mixture-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 10 — Gaussian Mixture Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-11-support-vector-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 11 — Support Vector Machines
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mathematics-for-machine-learning">Mathematics for Machine Learning</h1>
+<h2 id="part-i-mathematical-foundations">PART I — Mathematical Foundations</h2>
+<h3 id="module-1-introduction">Module 1 — Introduction</h3>
+<p><strong>Class 1</strong><br />
+- What is Machine Learning<br />
+- Data, models, training, prediction<br />
+- Why mathematics is needed  </p>
+<hr />
+<h3 id="module-2-linear-algebra">Module 2 — Linear Algebra</h3>
+<p><strong>Class 2</strong> – Scalars, vectors, matrices, notation<br />
+<strong>Class 3</strong> – Linear systems and matrix operations<br />
+<strong>Class 4</strong> – Matrix inverse and rank<br />
+<strong>Class 5</strong> – Vector spaces and subspaces<br />
+<strong>Class 6</strong> – Linear independence, basis, dimension<br />
+<strong>Class 7</strong> – Column space and null space<br />
+<strong>Class 8</strong> – Linear maps and geometric interpretation  </p>
+<hr />
+<h3 id="module-3-analytic-geometry">Module 3 — Analytic Geometry</h3>
+<p><strong>Class 9</strong> – Norms and distances<br />
+<strong>Class 10</strong> – Inner products and angles<br />
+<strong>Class 11</strong> – Orthogonality and orthonormal bases<br />
+<strong>Class 12</strong> – Projections and least squares<br />
+<strong>Class 13</strong> – Geometry of data  </p>
+<hr />
+<h3 id="module-4-matrix-decompositions-chapter-4">Module 4 — Matrix Decompositions (Chapter 4)</h3>
+<p><strong>Class 14</strong> – Determinant and trace<br />
+<strong>Class 15</strong> – Eigenvalues and eigenvectors<br />
+<strong>Class 16</strong> – Diagonalization and spectral theorem<br />
+<strong>Class 17</strong> – Singular Value Decomposition (SVD)<br />
+<strong>Class 18</strong> – SVD for data representation  </p>
+<hr />
+<h3 id="module-5-vector-calculus">Module 5 — Vector Calculus</h3>
+<p><strong>Class 19</strong> – Multivariate functions<br />
+<strong>Class 20</strong> – Gradients and partial derivatives<br />
+<strong>Class 21</strong> – Jacobian, Hessian, Taylor expansion<br />
+<strong>Class 22</strong> – Gradient-based optimization  </p>
+<hr />
+<h3 id="module-6-probability">Module 6 — Probability</h3>
+<p><strong>Class 23</strong> – Random variables and distributions<br />
+<strong>Class 24</strong> – Expectation, variance, covariance<br />
+<strong>Class 25</strong> – Multivariate Gaussian distribution<br />
+<strong>Class 26</strong> – Probability and data modeling  </p>
+<hr />
+<h2 id="part-ii-core-machine-learning">PART II — Core Machine Learning</h2>
+<h3 id="module-7-when-models-meet-data">Module 7 — When Models Meet Data</h3>
+<p><strong>Class 27</strong> – Training vs testing and generalization<br />
+<strong>Class 28</strong> – Loss functions and empirical risk<br />
+<strong>Class 29</strong> – Overfitting, bias–variance, regularization  </p>
+<hr />
+<h3 id="module-8-linear-regression">Module 8 — Linear Regression</h3>
+<p><strong>Class 30</strong> – Linear regression model<br />
+<strong>Class 31</strong> – Least-squares solution<br />
+<strong>Class 32</strong> – Regularized regression  </p>
+<hr />
+<h3 id="module-9-principal-component-analysis">Module 9 — Principal Component Analysis</h3>
+<p><strong>Class 33</strong> – Dimensionality reduction and covariance<br />
+<strong>Class 34</strong> – Eigenvectors and principal components<br />
+<strong>Class 35</strong> – PCA using SVD<br />
+<strong>Class 36</strong> – PCA for compression and visualization  </p>
+<hr />
+<h3 id="module-10-gaussian-mixture-models">Module 10 — Gaussian Mixture Models</h3>
+<p><strong>Class 37</strong> – Density estimation and mixture models<br />
+<strong>Class 38</strong> – Gaussian Mixture Models<br />
+<strong>Class 39</strong> – Expectation–Maximization (EM) algorithm  </p>
+<hr />
+<h3 id="module-11-support-vector-machines">Module 11 — Support Vector Machines</h3>
+<p><strong>Class 40</strong> – Maximum-margin classification and SVMs  </p>
+<hr />
+<h2 id="textbook">Textbook</h2>
+<p>Deisenroth, M. P., Faisal, A. A., &amp; Ong, C. S. (2020). <strong>Mathematics for Machine Learning</strong>. Cambridge: Cambridge University Press. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
