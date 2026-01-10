@@ -1,4 +1,6 @@
 site_name: MA2221 — Foundational Mathematics for Machine Learning
+site_url: https://biswarupbiswas.github.io/MA2221
+
 
 theme:
   name: material
