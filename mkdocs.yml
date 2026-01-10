@@ -1,7 +1,6 @@
 site_name: MA2221 — Foundational Mathematics for Machine Learning
 site_url: https://biswarupbiswas.github.io/MA2221
 
-
 theme:
   name: material
   logo: assets/MFML_logo.png
@@ -10,10 +9,14 @@ theme:
     scheme: default
     primary: indigo
     accent: blue
+  features:
+    - navigation.sections
+    - content.code.copy
 
 nav:
-  - Lectures: index.md
+  - Home: index.md
   - Syllabus: syllabus.md
+  - Lectures: lectures.md
   - Tutorials: tutorials.md
   - Codes: codes.md
 
@@ -22,3 +25,8 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css

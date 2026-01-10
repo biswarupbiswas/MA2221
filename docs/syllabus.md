@@ -97,7 +97,9 @@
 
 ### Module 11 — Support Vector Machines
 
-**Class 40** – Maximum-margin classification and separating hyperplanes  
+**Class 40** – Maximum margin classification and separating hyperplanes  
+**Class 41** – Dual formulation and support vectors  
+**Class 42** – Kernel methods and nonlinear decision boundaries  
 
 ---
 

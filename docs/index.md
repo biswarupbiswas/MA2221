@@ -1,29 +1,24 @@
 # MA2221 – Foundational Mathematics for Machine Learning
 
-**Instructor:**  
-[Biswarup Biswas](https://biswarupbiswas.github.io)  
-[Mahindra University](https://www.mahindrauniversity.edu.in)
-
-**Class Timings:**  
-- **Lecture:** Tue 9:25–10:20, Wed 10:35–11:30, Thu 2:35–3:30  
-  *(Room: ELT6)*  
-- **Lab:** Monday 3:35–5:30  
-  *(Computer Lab 3)*
 ---
 
-## Lectures
+## ℹ️ Course Information
 
-| No | Date       | Topic                                      | Slides |
-|----|------------|--------------------------------------------|--------|
-| 1  | 20-01-2026 | Introduction to Machine Learning and Models|        |
-| 2  | 21-01-2026 | Scalars, Vectors, and Matrices             |        |
+**Instructor:** [Biswarup Biswas](https://biswarupbiswas.github.io)  
+**Institution:** Mahindra University
+
+### 📅 Class Schedule
+
+| Session Type | Day | Time | Venue |
+| :--- | :--- | :--- | :--- |
+| **Practical** | Monday | 15:35 – 17:30 | Computer Lab 3 |
+| **Lecture** | Tuesday | 09:25 – 10:20 | ELT6 |
+| **Lecture** | Wednesday | 10:35 – 11:30 | ELT6 |
+| **Lecture** | Thursday | 14:35 – 15:30 | ELT6 |
 
 
 ---
 
-## Tutorials
+## 🎯 About the Course
 
-| No | Sheet |
-|----|-------|
-| 1  |       |
-| 2  |       |
+This course develops a mathematical perspective on machine learning, focusing on how data and models are described using linear algebra, geometry, probability, and optimization. It emphasizes understanding learning as a problem of fitting and approximating functions in high dimensional spaces, while also giving students hands on experience in applying these ideas to real data. The course equips students with the mathematical language and practical insight needed to analyze and use modern machine learning methods in a clear and principled way.
