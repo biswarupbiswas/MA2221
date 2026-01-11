@@ -13,11 +13,20 @@ theme:
     - navigation.sections
     - content.code.copy
 
+plugins:
+  - search
+  - mkdocs-jupyter:
+      execute: false
+      include_source: false
+      # Note: include_mathjax is removed to avoid the 'Unrecognised' warning
+
 nav:
   - Home: index.md
   - Syllabus: syllabus.md
   - Lectures: lectures.md
   - Tutorials: tutorials.md
+  - Notebooks:
+      - Lab 1: notebooks/notebook1.ipynb
   - Codes: codes.md
 
 markdown_extensions:
@@ -30,3 +39,7 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
