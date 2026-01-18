@@ -1,8 +1,10 @@
 site_name: MA2221 — Foundational Mathematics for Machine Learning
 site_url: https://biswarupbiswas.github.io/MA2221
+copyright: Copyright &copy; 2026 Biswarup Biswas # Add this at the top level
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/MFML_logo.png
   favicon: assets/MFML_logo.png
   palette:
@@ -12,6 +14,7 @@ theme:
   features:
     - navigation.sections
     - content.code.copy
+    - footer.hide.generator # The "new" way
 
 plugins:
   - search
@@ -43,3 +46,12 @@ extra_css:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/biswarupbiswas
+    - icon: fontawesome/solid/envelope
+      link: mailto:your-biswarup.biswas@mahindrauniversity.edu.in
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dr-biswarup-biswas
