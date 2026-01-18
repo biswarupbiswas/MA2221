@@ -27,7 +27,7 @@ nav:
   - Tutorials: tutorials.md
   - Notebooks:
       - Lab 1: notebooks/notebook1.ipynb
-  - Codes: codes.md
+  # - Codes: codes.md
 
 markdown_extensions:
   - admonition
