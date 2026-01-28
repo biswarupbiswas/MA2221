@@ -30,6 +30,7 @@ nav:
   - Tutorials: tutorials.md
   - Notebooks:
       - Lab 1: notebooks/notebook1.ipynb
+  - Assignments: assignments.md
   # - Codes: codes.md
 
 markdown_extensions:
@@ -52,6 +53,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/biswarupbiswas
     - icon: fontawesome/solid/envelope
-      link: mailto:your-biswarup.biswas@mahindrauniversity.edu.in
+      link: mailto:biswarup.biswas@mahindrauniversity.edu.in
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/dr-biswarup-biswas
