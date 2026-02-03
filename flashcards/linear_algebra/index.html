@@ -1,0 +1,1162 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://biswarupbiswas.github.io/MA2221/flashcards/linear_algebra/">
+      
+      
+        <link rel="prev" href="../../assignments/">
+      
+      
+        <link rel="next" href="../Norms/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/MFML_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Linear Algebra - MA2221 — Foundational Mathematics for Machine Learning</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linear-algebra" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MA2221 — Foundational Mathematics for Machine Learning" class="md-header__button md-logo" aria-label="MA2221 — Foundational Mathematics for Machine Learning" data-md-component="logo">
+      
+  <img src="../../assets/MFML_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MA2221 — Foundational Mathematics for Machine Learning
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linear Algebra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MA2221 — Foundational Mathematics for Machine Learning" class="md-nav__button md-logo" aria-label="MA2221 — Foundational Mathematics for Machine Learning" data-md-component="logo">
+      
+  <img src="../../assets/MFML_logo.png" alt="logo">
+
+    </a>
+    MA2221 — Foundational Mathematics for Machine Learning
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Notebooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/notebook1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/notebook2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Number system, Lists, Tuples, Sets, Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assignments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flashcards
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Flashcards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Norms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Norm and Inner Product
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linear-algebra">Linear Algebra</h1>
+<details>
+<summary><strong>In the context of square matrices, what is the defining property of an inverse matrix $B$ for a matrix $A \in \mathbb{R}^{n \times n}$?</strong></summary>
+
+$AB = I_n = BA$, where $I_n$ is the identity matrix.
+
+</details>
+
+<details>
+<summary><strong>What term describes a square matrix that does not possess an inverse?</strong></summary>
+
+Singular or noninvertible.
+
+</details>
+
+<details>
+<summary><strong>How is the inverse of a matrix product $(AB)^{-1}$ calculated in terms of the individual inverses?</strong></summary>
+
+$(AB)^{-1} = B^{-1}A^{-1}$.
+
+</details>
+
+<details>
+<summary><strong>Given the inverse of a matrix $A$, what is the relationship between $(A^{-1})^{\top}$ and $(A^{\top})^{-1}$?</strong></summary>
+
+They are equal, denoted as $A^{-\top}$.
+
+</details>
+
+<details>
+<summary><strong>True or False: For any two invertible matrices $A$ and $B$, $(A+B)^{-1} = A^{-1} + B^{-1}$.</strong></summary>
+
+False.
+
+</details>
+
+<details>
+<summary><strong>If a square matrix $A$ is symmetric, what property is guaranteed for its inverse $A^{-1}$?</strong></summary>
+
+$A^{-1}$ is also symmetric.
+
+</details>
+
+<details>
+<summary><strong>In the case of a non-square matrix $A$ with linearly independent columns, what formula yields the unique least-squares solution to $Ax=b$?</strong></summary>
+
+$x = (A^{\top}A)^{-1}A^{\top}b$.
+
+</details>
+
+<details>
+<summary><strong>What is the name of the operator $A^{+} = (A^{\top}A)^{-1}A^{\top}$ used in solving overdetermined systems?</strong></summary>
+
+The Moore-Penrose pseudo-inverse.
+
+</details>
+
+<details>
+<summary><strong>What are the four essential axioms a set $G$ and an operation $\otimes$ must satisfy to be considered a Group?</strong></summary>
+
+Closure, Associativity, Neutral Element, and Inverse Element.
+
+</details>
+
+<details>
+<summary><strong>What additional property distinguishes an Abelian group from a standard group?</strong></summary>
+
+Commutativity (e.g., $x \otimes y = y \otimes x$).
+
+</details>
+
+<details>
+<summary><strong>Why is the set of natural numbers $(\mathbb{N}_0, +)$ not considered a group despite having a neutral element (0)?</strong></summary>
+
+It lacks inverse elements for all members.
+
+</details>
+
+<details>
+<summary><strong>Why is the set of integers under multiplication $(\mathbb{Z}, \cdot)$ not a group?</strong></summary>
+
+Inverses are missing for most elements (e.g., the inverse of 2 is $0.5 \notin \mathbb{Z}$).
+
+</details>
+
+<details>
+<summary><strong>In linear algebra, what is the &#x27;General Linear Group&#x27; $GL(n, \mathbb{R})$?</strong></summary>
+
+The set of regular (invertible) $n \times n$ matrices under multiplication.
+
+</details>
+
+<details>
+<summary><strong>A real-valued Vector Space $V$ consists of a set $V$ equipped with which two operations?</strong></summary>
+
+Addition (inner operation) and Scalar Multiplication (outer operation).
+
+</details>
+
+<details>
+<summary><strong>According to the vector space axioms, what kind of group must $(V, +)$ be?</strong></summary>
+
+An Abelian group.
+
+</details>
+
+<details>
+<summary><strong>What are the two distributive laws that must hold in a vector space?</strong></summary>
+
+$\lambda \cdot (x + y) = \lambda \cdot x + \lambda \cdot y$ and $(\lambda + \psi) \cdot x = \lambda \cdot x + \psi \cdot x$.
+
+</details>
+
+<details>
+<summary><strong>The set of complex numbers $\mathbb{C}$ is isomorphic to which real vector space?</strong></summary>
+
+$\mathbb{R}^2$.
+
+</details>
+
+<details>
+<summary><strong>What is the formal definition of a vector subspace $U \subseteq V$?</strong></summary>
+
+A subset that is itself a vector space under the restricted operations of $V$ (closed under addition and scalar multiplication).
+
+</details>
+
+<details>
+<summary><strong>Definition: Linear Independence</strong></summary>
+
+A set of vectors $x_1, \dots, x_k$ where the equation $\sum_{i=1}^{k} \lambda_i x_i = 0$ has only the trivial solution $\lambda_1 = \dots = \lambda_k = 0$.
+
+</details>
+
+<details>
+<summary><strong>What defines a &#x27;Basis&#x27; of a vector space $V$?</strong></summary>
+
+A linearly independent generating set of $V$.
+
+</details>
+
+<details>
+<summary><strong>How is the dimension of a finite-dimensional vector space $V$ defined?</strong></summary>
+
+The number of vectors in its basis.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Rank&#x27; of a matrix $A \in \mathbb{R}^{m \times n}$?</strong></summary>
+
+The number of linearly independent columns in the matrix.
+
+</details>
+
+<details>
+<summary><strong>In data science, what does the rank of a data matrix $A$ signify?</strong></summary>
+
+The number of independent directions (intrinsic dimensionality) in the data.
+
+</details>
+
+<details>
+<summary><strong>What condition must a mapping $\Phi: V \to W$ satisfy to be considered &#x27;linear&#x27; (a homomorphism)?</strong></summary>
+
+$\Phi(\lambda x + \psi y) = \lambda \Phi(x) + \psi \Phi(y)$ for all vectors $x, y$ and scalars $\lambda, \psi$.
+
+</details>
+
+<details>
+<summary><strong>Define an &#x27;Injective&#x27; mapping.</strong></summary>
+
+A mapping where $\Phi(x) = \Phi(y)$ implies $x = y$ (one-to-one).
+
+</details>
+
+<details>
+<summary><strong>What is an &#x27;Isomorphism&#x27; in the context of linear mappings?</strong></summary>
+
+A linear mapping that is both injective and surjective (bijective).
+
+</details>
+
+<details>
+<summary><strong>What is an &#x27;Endomorphism&#x27;?</strong></summary>
+
+A linear mapping from a vector space to itself ($\Phi: V \to V$).
+
+</details>
+
+<details>
+<summary><strong>How is the transformation matrix $A_{\Phi}$ of a linear mapping $\Phi: V \to W$ constructed relative to bases $B$ and $C$?</strong></summary>
+
+The columns of $A_{\Phi}$ are the coordinate vectors of $\Phi(b_j)$ represented in basis $C$.
+
+</details>
+
+<details>
+<summary><strong>What is the formal definition of &#x27;Similar&#x27; matrices $A, \tilde{A} \in \mathbb{R}^{n \times n}$?</strong></summary>
+
+There exists a regular matrix $S$ such that $\tilde{A} = S^{-1}AS$.
+
+</details>
+
+<details>
+<summary><strong>Distinguish between &#x27;Equivalence&#x27; and &#x27;Similarity&#x27; for matrices.</strong></summary>
+
+Similarity requires $V=W$ and using the same basis change $S$, whereas Equivalence allows different bases $S$ and $T$ for domain and codomain.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Kernel&#x27; (or Null Space) of a linear mapping $\Phi$?</strong></summary>
+
+The set of all vectors in the domain that map to the zero vector in the codomain.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Image&#x27; (or Range) of a linear mapping $\Phi$?</strong></summary>
+
+The set of all vectors in the codomain that can be expressed as $\Phi(v)$ for some $v$ in the domain.
+
+</details>
+
+<details>
+<summary><strong>How is the rank of a matrix $A$ related to the image of its corresponding linear mapping $\Phi$?</strong></summary>
+
+$rk(A) = dim(Im(\Phi))$.
+
+</details>
+
+<details>
+<summary><strong>What is an &#x27;Affine Mapping&#x27; $\phi(x)$?</strong></summary>
+
+A composition of a linear mapping $\Phi(x)$ and a translation vector $a$, written as $\phi(x) = a + \Phi(x)$.
+
+</details>
+
+<details>
+<summary><strong>What property is preserved by an orthogonal matrix $A$ during a transformation?</strong></summary>
+
+It preserves lengths of vectors and angles between them (distances and dot products).
+
+</details>
+
+<details>
+<summary><strong>What is the defining characteristic of an orthogonal matrix $A$ regarding its inverse?</strong></summary>
+
+$A^{-1} = A^{\top}$.
+
+</details>
+
+<details>
+<summary><strong>A square matrix $A$ is invertible if and only if its determinant $det(A)$ satisfies what condition?</strong></summary>
+
+$det(A) \ne 0$.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Trace&#x27; of a square matrix $A$?</strong></summary>
+
+The sum of the diagonal elements of the matrix.
+
+</details>
+
+<details>
+<summary><strong>What is the cyclic permutation property of the trace for three matrices $A, K, L$?</strong></summary>
+
+$tr(AKL) = tr(KLA) = tr(LAK)$.
+
+</details>
+
+<details>
+<summary><strong>The Cholesky decomposition $A = LL^{\top}$ is defined for which class of matrices?</strong></summary>
+
+Symmetric, positive definite matrices.
+
+</details>
+
+<details>
+<summary><strong>What are the components of the Singular Value Decomposition (SVD) of a matrix $A$?</strong></summary>
+
+$A = U \Sigma V^{\top}$, where $U$ and $V$ are orthogonal and $\Sigma$ is a diagonal matrix of singular values.
+
+</details>
+
+<details>
+<summary><strong>In SVD, what do the columns of $U$ and $V$ represent?</strong></summary>
+
+$U$ contains the left-singular vectors and $V$ contains the right-singular vectors.
+
+</details>
+
+<details>
+<summary><strong>How are the nonzero singular values $\sigma_i$ of $A$ related to the eigenvalues of $A^{\top}A$?</strong></summary>
+
+The singular values are the square roots of the nonzero eigenvalues of $A^{\top}A$.
+
+</details>
+
+<details>
+<summary><strong>What makes the SVD more flexible than the eigendecomposition?</strong></summary>
+
+SVD exists for all matrices (including non-square), whereas eigendecomposition requires a square, non-defective matrix.
+
+</details>
+
+<details>
+<summary><strong>According to the Eckart-Young theorem, how is the best rank-$k$ approximation of a matrix $A$ obtained?</strong></summary>
+
+By truncating the SVD to the top $k$ singular values (truncated SVD).
+
+</details>
+
+<details>
+<summary><strong>What is the primary objective of Principal Component Analysis (PCA)?</strong></summary>
+
+To find a lower-dimensional representation that maximizes the variance of the projected data.
+
+</details>
+
+<details>
+<summary><strong>In PCA, the principal components correspond to which specific vectors of the data covariance matrix $S$?</strong></summary>
+
+The eigenvectors associated with the largest eigenvalues.
+
+</details>
+
+<details>
+<summary><strong>How is the variance lost during PCA data compression calculated?</strong></summary>
+
+It is the sum of the eigenvalues associated with the discarded principal components.
+
+</details>
+
+<details>
+<summary><strong>What is the relationship between PCA and the reconstruction error?</strong></summary>
+
+PCA finds the subspace that minimizes the average squared reconstruction error.
+
+</details>
+
+<details>
+<summary><strong>In the context of SVMs, what is a &#x27;Separating Hyperplane&#x27;?</strong></summary>
+
+An affine subspace that partitions the feature space into two halves corresponding to different classes.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Kernel Trick&#x27; in machine learning?</strong></summary>
+
+Computing inner products in a high-dimensional feature space implicitly using a kernel function $k(x_i, x_j)$.
+
+</details>
+
+<details>
+<summary><strong>Define &#x27;Linear Combination&#x27; in a vector space $V$.</strong></summary>
+
+A vector $v = \sum_{i=1}^{k} \lambda_i x_i$, where $x_i \in V$ and $\lambda_i$ are real scalars.
+
+</details>
+
+<details>
+<summary><strong>A set of vectors is &#x27;linearly dependent&#x27; if what condition regarding the zero vector is met?</strong></summary>
+
+There exists a non-trivial linear combination (not all scalars zero) that equals the zero vector.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Span&#x27; of a set of vectors $A$?</strong></summary>
+
+The set of all possible linear combinations of the vectors in $A$.
+
+</details>
+
+<details>
+<summary><strong>If $U$ is a subspace of $V$, what is the relationship between their dimensions?</strong></summary>
+
+$dim(U) \le dim(V)$, with equality only if $U = V$.
+
+</details>
+
+<details>
+<summary><strong>In the SVD transformation sequence, what operation does the matrix $V^{\top}$ perform first?</strong></summary>
+
+A change of basis in the domain $\mathbb{R}^n$.
+
+</details>
+
+<details>
+<summary><strong>What is an &#x27;Automorphism&#x27;?</strong></summary>
+
+A bijective linear mapping from a space to itself.
+
+</details>
+
+<details>
+<summary><strong>In a coordinate system, what are the &#x27;coordinates&#x27; of a vector $x$ relative to an ordered basis $B = (b_1, \dots, b_n)$?</strong></summary>
+
+The unique scalars $\alpha_1, \dots, \alpha_n$ such that $x = \sum \alpha_i b_i$.
+
+</details>
+
+<details>
+<summary><strong>Under what condition is a linear mapping $\Phi$ injective?</strong></summary>
+
+If and only if its kernel consists solely of the zero vector ($ker(\Phi) = \{0_V\}$).
+
+</details>
+
+<details>
+<summary><strong>Formula: Determinant of the product of two square matrices $A$ and $B$.</strong></summary>
+
+$det(AB) = det(A)det(B)$.
+
+</details>
+
+<details>
+<summary><strong>What does the &#x27;rank-nullity theorem&#x27; imply about the dimensions of the kernel and image of $\Phi: V \to W$?</strong></summary>
+
+$dim(V) = dim(ker(\Phi)) + dim(Im(\Phi))$.
+
+</details>
+
+<details>
+<summary><strong>How does the Cholesky decomposition facilitate efficient determinant calculation?</strong></summary>
+
+$det(A) = det(L)^2$, which is the square of the product of the diagonal entries of the triangular matrix $L$.
+
+</details>
+
+<details>
+<summary><strong>Why is array-based &#x27;element-wise&#x27; multiplication rarely used in standard linear algebra compared to matrix multiplication?</strong></summary>
+
+It does not follow standard matrix multiplication rules and has mismatched dimensions when vectors are treated as $n \times 1$ matrices.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;Spectral Theorem&#x27; regarding symmetric matrices?</strong></summary>
+
+It states that symmetric matrices can be diagonalized by an orthonormal basis of eigenvectors.
+
+</details>
+
+<details>
+<summary><strong>What is the &#x27;null space&#x27; of a matrix $A$ in terms of linear equations?</strong></summary>
+
+The set of all solutions to the homogeneous system $Ax = 0$.
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Biswarup Biswas
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/biswarupbiswas" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:biswarup.biswas@mahindrauniversity.edu.in" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/dr-biswarup-biswas" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "content.code.copy", "footer.hide.generator"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
