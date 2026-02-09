@@ -1,5 +1,9 @@
 site_name: MA2221 — Foundational Mathematics for Machine Learning
 site_url: https://biswarupbiswas.github.io/MA2221
+
+repo_url: https://github.com/biswarupbiswas/MA2221
+edit_uri: blob/main/docs/
+
 copyright: Copyright &copy; 2026 Biswarup Biswas # Add this at the top level
 
 theme:
@@ -20,7 +24,7 @@ plugins:
   - search
   - mkdocs-jupyter:
       execute: false
-      include_source: false
+      include_source: true
       # Note: include_mathjax is removed to avoid the 'Unrecognised' warning
 
 nav:
@@ -30,8 +34,13 @@ nav:
   - Tutorials: tutorials.md
   - Notebooks:
       - Lab 1: notebooks/notebook1.ipynb
+      - Lab 2: notebooks/notebook2.ipynb
+      - Lab 3: notebooks/notebook3.ipynb
   - Assignments: assignments.md
   # - Codes: codes.md
+  - Flashcards:
+      - Linear Algebra: flashcards/linear_algebra.md
+      - Norm and Inner Product: flashcards/Norms.md
 
 markdown_extensions:
   - admonition

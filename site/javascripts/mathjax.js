@@ -23,3 +23,11 @@ if (typeof app !== "undefined") {
     }
   });
 }
+// /* 🔧 FIX: typeset math when a flashcard (<details>) is opened */
+// document.addEventListener("toggle", function (event) {
+//   if (event.target.tagName === "DETAILS") {
+//     if (window.MathJax) {
+//       MathJax.typesetPromise([event.target]);
+//     }
+//   }
+// });
