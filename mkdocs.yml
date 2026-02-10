@@ -41,6 +41,7 @@ nav:
   - Flashcards:
       - Linear Algebra: flashcards/linear_algebra.md
       - Norm and Inner Product: flashcards/Norms.md
+      - Matrix Factorisation: flashcards/matrix_fact.md
 
 markdown_extensions:
   - admonition
