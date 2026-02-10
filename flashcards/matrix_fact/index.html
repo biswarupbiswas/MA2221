@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://biswarupbiswas.github.io/MA2221/flashcards/linear_algebra/">
+        <link rel="canonical" href="https://biswarupbiswas.github.io/MA2221/flashcards/matrix_fact/">
       
       
-        <link rel="prev" href="../../assignments/">
+        <link rel="prev" href="../Norms/">
       
-      
-        <link rel="next" href="../Norms/">
       
       
         
@@ -25,7 +23,7 @@
     
     
       
-        <title>Linear Algebra - MA2221 — Foundational Mathematics for Machine Learning</title>
+        <title>Matrix Factorisation - MA2221 — Foundational Mathematics for Machine Learning</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-algebra" class="md-skip">
+        <a href="#matrix-factorisation" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linear Algebra
+              Matrix Factorisation
             
           </span>
         </div>
@@ -559,19 +557,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../linear_algebra/" class="md-nav__link">
         
   
   
@@ -587,7 +576,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -625,10 +613,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../matrix_fact/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -644,6 +641,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -694,459 +692,529 @@
   
 
 
-<h1 id="linear-algebra">Linear Algebra</h1>
+<h1 id="matrix-factorisation">Matrix Factorisation</h1>
 <details>
-<summary><strong>In the context of square matrices, what is the defining property of an inverse matrix $B$ for a matrix $A \in \mathbb{R}^{n \times n}$?</strong></summary>
+<summary><strong>What is the fundamental equation defining an eigenvalue $\lambda$ and its corresponding eigenvector $x$ for a square matrix $A$?</strong></summary>
 
-$AB = I_n = BA$, where $I_n$ is the identity matrix.
+$Ax = \lambda x$ (where $x \ne 0$).
 
 </details>
 
 <details>
-<summary><strong>What term describes a square matrix that does not possess an inverse?</strong></summary>
+<summary><strong>In terms of the determinant, what condition must $\lambda$ satisfy to be an eigenvalue of matrix $A$?</strong></summary>
 
-Singular or noninvertible.
-
-</details>
-
-<details>
-<summary><strong>How is the inverse of a matrix product $(AB)^{-1}$ calculated in terms of the individual inverses?</strong></summary>
-
-$(AB)^{-1} = B^{-1}A^{-1}$.
+$\det(A - \lambda I) = 0$.
 
 </details>
 
 <details>
-<summary><strong>Given the inverse of a matrix $A$, what is the relationship between $(A^{-1})^{\top}$ and $(A^{\top})^{-1}$?</strong></summary>
+<summary><strong>How does the geometric multiplicity $gm(\lambda)$ of an eigenvalue compare to its algebraic multiplicity $am(\lambda)$?</strong></summary>
 
-They are equal, denoted as $A^{-\top}$.
+$gm(\lambda) \le am(\lambda)$.
 
 </details>
 
 <details>
-<summary><strong>True or False: For any two invertible matrices $A$ and $B$, $(A+B)^{-1} = A^{-1} + B^{-1}$.</strong></summary>
+<summary><strong>According to the Spectral Theorem, what special basis exists for the vector space of a symmetric matrix $A \in \mathbb{R}^{n \times n}$?</strong></summary>
+
+An orthonormal basis consisting of eigenvectors of $A$.
+
+</details>
+
+<details>
+<summary><strong>What specific properties must a matrix $A$ possess to be factorized using Cholesky decomposition?</strong></summary>
+
+It must be symmetric and positive definite.
+
+</details>
+
+<details>
+<summary><strong>In the Cholesky decomposition $A = LL^\top$, what is the structural form of the matrix $L$?</strong></summary>
+
+A lower-triangular matrix with positive diagonal elements.
+
+</details>
+
+<details>
+<summary><strong>Given the Cholesky factor $L$, how is the determinant of the original matrix $A$ calculated efficiently?</strong></summary>
+
+$\det(A) = (\prod_{i} l_{ii})^2$.
+
+</details>
+
+<details>
+<summary><strong>Why is Singular Value Decomposition (SVD) referred to as the &#x27;fundamental theorem of linear algebra&#x27;?</strong></summary>
+
+It can be applied to all matrices (not just square) and it always exists.
+
+</details>
+
+<details>
+<summary><strong>In the SVD $A = U\Sigma V^\top$, what mathematical property is shared by the matrices $U$ and $V$?</strong></summary>
+
+They are both orthogonal matrices.
+
+</details>
+
+<details>
+<summary><strong>By convention, how are the singular values $\sigma_i$ on the diagonal of $\Sigma$ typically ordered?</strong></summary>
+
+In descending order ($\sigma_1 \ge \sigma_2 \ge \dots \ge 0$).
+
+</details>
+
+<details>
+<summary><strong>Using the spectral norm, what is the approximation error when representing matrix $A$ by its rank-$k$ approximation $\hat{A}(k)$?</strong></summary>
+
+$\|A - \hat{A}(k)\|_2 = \sigma_{k+1}$.
+
+</details>
+
+<details>
+<summary><strong>The eigenspace $E_{\lambda}$ is defined as the set of all eigenvectors associated with $\lambda$ and is equivalent to the _____ of $(A - \lambda I)$.</strong></summary>
+
+kernel (or null space)
+
+</details>
+
+<details>
+<summary><strong>For a symmetric positive definite matrix $S = S^\top = PDP^\top$, how do the SVD matrices $U$ and $V$ relate to the eigendecomposition matrix $P$?</strong></summary>
+
+$U = P = V$.
+
+</details>
+
+<details>
+<summary><strong>What is the physical meaning of an eigenvalue $\lambda$ regarding its associated eigenvector during a linear transformation?</strong></summary>
+
+It is the factor by which the eigenvector is stretched.
+
+</details>
+
+<details>
+<summary><strong>If an eigenvalue $\lambda$ is negative, what happens to the direction of its corresponding eigenvector under the linear mapping?</strong></summary>
+
+The direction of the stretching is flipped.
+
+</details>
+
+<details>
+<summary><strong>In SVD construction, the right-singular vectors $v_j$ are the orthonormal eigenvectors of which symmetric matrix?</strong></summary>
+
+$A^\top A$.
+
+</details>
+
+<details>
+<summary><strong>How is the $i$-th left-singular vector $u_i$ derived from the right-singular vector $v_i$ and singular value $\sigma_i$ in SVD?</strong></summary>
+
+$u_i = \frac{1}{\sigma_i} Av_i$.
+
+</details>
+
+<details>
+<summary><strong>What is the relationship between the singular values $\sigma_i$ of $A$ and the eigenvalues $\lambda_i$ of $A^\top A$?</strong></summary>
+
+$\sigma_i = \sqrt{\lambda_i}$.
+
+</details>
+
+<details>
+<summary><strong>In the rank-$k$ approximation $\hat{A}(k) = \sum_{i=1}^k \sigma_i u_i v_i^\top$, what is the rank of each individual term $u_i v_i^\top$?</strong></summary>
+
+1
+
+</details>
+
+<details>
+<summary><strong>Which theorem states that the rank-$k$ approximation $\hat{A}(k)$ is the optimal rank-$k$ representation of $A$ in the spectral norm sense?</strong></summary>
+
+The Eckart-Young Theorem.
+
+</details>
+
+<details>
+<summary><strong>Why is the Cholesky decomposition $A = LL^\top$ particularly useful for computing the inverse of an SPD matrix?</strong></summary>
+
+It reduces the task to inverting two triangular matrices, which is computationally easier.
+
+</details>
+
+<details>
+<summary><strong>A matrix $D$ is called a _____ matrix if all its off-diagonal elements are zero.</strong></summary>
+
+diagonal
+
+</details>
+
+<details>
+<summary><strong>What is the result of raising a diagonal matrix $D$ to the power $k$?</strong></summary>
+
+A diagonal matrix where each diagonal entry $d_{ii}$ is raised to the power $k$.
+
+</details>
+
+<details>
+<summary><strong>Under what condition is the Cholesky factor $L$ of a symmetric positive definite matrix unique?</strong></summary>
+
+The diagonal elements of $L$ must be positive.
+
+</details>
+
+<details>
+<summary><strong>In the context of SVD, the set of all eigenvalues of a square matrix $A$ is known as the _____.</strong></summary>
+
+eigenspectrum (or spectrum)
+
+</details>
+
+<details>
+<summary><strong>How does SVD assist in dimensionality reduction techniques like Principal Component Analysis (PCA)?</strong></summary>
+
+It identifies the directions (singular vectors) along which the data has the most variance (largest singular values).
+
+</details>
+
+<details>
+<summary><strong>Which matrix decomposition is preferred for generating samples from a multivariate Gaussian distribution?</strong></summary>
+
+Cholesky decomposition.
+
+</details>
+
+<details>
+<summary><strong>The dimension of the eigenspace $E_{\lambda}$ is called the _____ multiplicity of the eigenvalue $\lambda$.</strong></summary>
+
+geometric
+
+</details>
+
+<details>
+<summary><strong>In the characteristic polynomial $p_A(\lambda) = \det(A - \lambda I)$, what does the algebraic multiplicity $am(\lambda_i)$ represent?</strong></summary>
+
+The number of times the root $\lambda_i$ appears in the polynomial.
+
+</details>
+
+<details>
+<summary><strong>True or False: A matrix and its transpose always possess the same eigenvectors.</strong></summary>
 
 False.
 
 </details>
 
 <details>
-<summary><strong>If a square matrix $A$ is symmetric, what property is guaranteed for its inverse $A^{-1}$?</strong></summary>
+<summary><strong>What is the relationship between the singular values of $A$ and the singular values of $A^\top$?</strong></summary>
 
-$A^{-1}$ is also symmetric.
-
-</details>
-
-<details>
-<summary><strong>In the case of a non-square matrix $A$ with linearly independent columns, what formula yields the unique least-squares solution to $Ax=b$?</strong></summary>
-
-$x = (A^{\top}A)^{-1}A^{\top}b$.
+They are identical.
 
 </details>
 
 <details>
-<summary><strong>What is the name of the operator $A^{+} = (A^{\top}A)^{-1}A^{\top}$ used in solving overdetermined systems?</strong></summary>
+<summary><strong>In SVD, the singular values $\sigma_i$ are the lengths of the _____ of the hyper-ellipse that the unit sphere is mapped to.</strong></summary>
 
-The Moore-Penrose pseudo-inverse.
-
-</details>
-
-<details>
-<summary><strong>What are the four essential axioms a set $G$ and an operation $\otimes$ must satisfy to be considered a Group?</strong></summary>
-
-Closure, Associativity, Neutral Element, and Inverse Element.
+semi-axes
 
 </details>
 
 <details>
-<summary><strong>What additional property distinguishes an Abelian group from a standard group?</strong></summary>
+<summary><strong>For a diagonal matrix $D$, the determinant is simply the _____ of its diagonal entries.</strong></summary>
 
-Commutativity (e.g., $x \otimes y = y \otimes x$).
-
-</details>
-
-<details>
-<summary><strong>Why is the set of natural numbers $(\mathbb{N}_0, +)$ not considered a group despite having a neutral element (0)?</strong></summary>
-
-It lacks inverse elements for all members.
+product
 
 </details>
 
 <details>
-<summary><strong>Why is the set of integers under multiplication $(\mathbb{Z}, \cdot)$ not a group?</strong></summary>
+<summary><strong>In a $3 \times 3$ Cholesky factorization, if $a_{11}$ is known, what is the formula for $l_{11}$?</strong></summary>
 
-Inverses are missing for most elements (e.g., the inverse of 2 is $0.5 \notin \mathbb{Z}$).
-
-</details>
-
-<details>
-<summary><strong>In linear algebra, what is the &#x27;General Linear Group&#x27; $GL(n, \mathbb{R})$?</strong></summary>
-
-The set of regular (invertible) $n \times n$ matrices under multiplication.
+$l_{11} = \sqrt{a_{11}}$.
 
 </details>
 
 <details>
-<summary><strong>A real-valued Vector Space $V$ consists of a set $V$ equipped with which two operations?</strong></summary>
+<summary><strong>Why is it impractical to implement the gradient of a deep neural network explicitly via manual derivation?</strong></summary>
 
-Addition (inner operation) and Scalar Multiplication (outer operation).
-
-</details>
-
-<details>
-<summary><strong>According to the vector space axioms, what kind of group must $(V, +)$ be?</strong></summary>
-
-An Abelian group.
+The functions are too complicated, making manual implementation expensive and error-prone.
 
 </details>
 
 <details>
-<summary><strong>What are the two distributive laws that must hold in a vector space?</strong></summary>
+<summary><strong>Backpropagation is a computational application of which rule from vector calculus?</strong></summary>
 
-$\lambda \cdot (x + y) = \lambda \cdot x + \lambda \cdot y$ and $(\lambda + \psi) \cdot x = \lambda \cdot x + \psi \cdot x$.
-
-</details>
-
-<details>
-<summary><strong>The set of complex numbers $\mathbb{C}$ is isomorphic to which real vector space?</strong></summary>
-
-$\mathbb{R}^2$.
+The chain rule.
 
 </details>
 
 <details>
-<summary><strong>What is the formal definition of a vector subspace $U \subseteq V$?</strong></summary>
+<summary><strong>What is the rank of a matrix $A$ if it has exactly $r$ non-zero singular values?</strong></summary>
 
-A subset that is itself a vector space under the restricted operations of $V$ (closed under addition and scalar multiplication).
-
-</details>
-
-<details>
-<summary><strong>Definition: Linear Independence</strong></summary>
-
-A set of vectors $x_1, \dots, x_k$ where the equation $\sum_{i=1}^{k} \lambda_i x_i = 0$ has only the trivial solution $\lambda_1 = \dots = \lambda_k = 0$.
+$r$
 
 </details>
 
 <details>
-<summary><strong>What defines a &#x27;Basis&#x27; of a vector space $V$?</strong></summary>
+<summary><strong>In the SVD $A = U\Sigma V^\top$, the matrix $U$ represents a rotation in the _____ space.</strong></summary>
 
-A linearly independent generating set of $V$.
-
-</details>
-
-<details>
-<summary><strong>How is the dimension of a finite-dimensional vector space $V$ defined?</strong></summary>
-
-The number of vectors in its basis.
+codomain (or target space $\mathbb{R}^m$)
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;Rank&#x27; of a matrix $A \in \mathbb{R}^{m \times n}$?</strong></summary>
+<summary><strong>The rank-$k$ approximation $\hat{A}(k)$ can be interpreted as a form of _____ compression for matrices.</strong></summary>
 
-The number of linearly independent columns in the matrix.
-
-</details>
-
-<details>
-<summary><strong>In data science, what does the rank of a data matrix $A$ signify?</strong></summary>
-
-The number of independent directions (intrinsic dimensionality) in the data.
+lossy
 
 </details>
 
 <details>
-<summary><strong>What condition must a mapping $\Phi: V \to W$ satisfy to be considered &#x27;linear&#x27; (a homomorphism)?</strong></summary>
+<summary><strong>In $A = U\Sigma V^\top$, what are the columns of $U$ called?</strong></summary>
 
-$\Phi(\lambda x + \psi y) = \lambda \Phi(x) + \psi \Phi(y)$ for all vectors $x, y$ and scalars $\lambda, \psi$.
-
-</details>
-
-<details>
-<summary><strong>Define an &#x27;Injective&#x27; mapping.</strong></summary>
-
-A mapping where $\Phi(x) = \Phi(y)$ implies $x = y$ (one-to-one).
+left-singular vectors
 
 </details>
 
 <details>
-<summary><strong>What is an &#x27;Isomorphism&#x27; in the context of linear mappings?</strong></summary>
+<summary><strong>In $A = U\Sigma V^\top$, what are the columns of $V$ called?</strong></summary>
 
-A linear mapping that is both injective and surjective (bijective).
-
-</details>
-
-<details>
-<summary><strong>What is an &#x27;Endomorphism&#x27;?</strong></summary>
-
-A linear mapping from a vector space to itself ($\Phi: V \to V$).
+right-singular vectors
 
 </details>
 
 <details>
-<summary><strong>How is the transformation matrix $A_{\Phi}$ of a linear mapping $\Phi: V \to W$ constructed relative to bases $B$ and $C$?</strong></summary>
+<summary><strong>True or False: Every symmetric matrix is diagonalizable.</strong></summary>
 
-The columns of $A_{\Phi}$ are the coordinate vectors of $\Phi(b_j)$ represented in basis $C$.
-
-</details>
-
-<details>
-<summary><strong>What is the formal definition of &#x27;Similar&#x27; matrices $A, \tilde{A} \in \mathbb{R}^{n \times n}$?</strong></summary>
-
-There exists a regular matrix $S$ such that $\tilde{A} = S^{-1}AS$.
+True (by the Spectral Theorem).
 
 </details>
 
 <details>
-<summary><strong>Distinguish between &#x27;Equivalence&#x27; and &#x27;Similarity&#x27; for matrices.</strong></summary>
+<summary><strong>What matrix property is required to ensure that all eigenvalues are real and an orthonormal eigenbasis exists?</strong></summary>
 
-Similarity requires $V=W$ and using the same basis change $S$, whereas Equivalence allows different bases $S$ and $T$ for domain and codomain.
-
-</details>
-
-<details>
-<summary><strong>What is the &#x27;Kernel&#x27; (or Null Space) of a linear mapping $\Phi$?</strong></summary>
-
-The set of all vectors in the domain that map to the zero vector in the codomain.
+The matrix must be symmetric.
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;Image&#x27; (or Range) of a linear mapping $\Phi$?</strong></summary>
+<summary><strong>In Cholesky decomposition, the matrix $L$ must have _____ diagonal elements to satisfy the square-root equivalent property.</strong></summary>
 
-The set of all vectors in the codomain that can be expressed as $\Phi(v)$ for some $v$ in the domain.
-
-</details>
-
-<details>
-<summary><strong>How is the rank of a matrix $A$ related to the image of its corresponding linear mapping $\Phi$?</strong></summary>
-
-$rk(A) = dim(Im(\Phi))$.
+positive
 
 </details>
 
 <details>
-<summary><strong>What is an &#x27;Affine Mapping&#x27; $\phi(x)$?</strong></summary>
+<summary><strong>How is the spectral norm $\|A\|_2$ defined in terms of SVD components?</strong></summary>
 
-A composition of a linear mapping $\Phi(x)$ and a translation vector $a$, written as $\phi(x) = a + \Phi(x)$.
-
-</details>
-
-<details>
-<summary><strong>What property is preserved by an orthogonal matrix $A$ during a transformation?</strong></summary>
-
-It preserves lengths of vectors and angles between them (distances and dot products).
+It is the largest singular value, $\sigma_1$.
 
 </details>
 
 <details>
-<summary><strong>What is the defining characteristic of an orthogonal matrix $A$ regarding its inverse?</strong></summary>
+<summary><strong>Which matrix decomposition can be used to compute the determinant of an SPD matrix $A$ as $\prod l_{ii}^2$?</strong></summary>
 
-$A^{-1} = A^{\top}$.
-
-</details>
-
-<details>
-<summary><strong>A square matrix $A$ is invertible if and only if its determinant $det(A)$ satisfies what condition?</strong></summary>
-
-$det(A) \ne 0$.
+Cholesky decomposition.
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;Trace&#x27; of a square matrix $A$?</strong></summary>
+<summary><strong>The rank-$k$ approximation of a matrix effectively discards the _____ singular values to reduce noise or save space.</strong></summary>
 
-The sum of the diagonal elements of the matrix.
-
-</details>
-
-<details>
-<summary><strong>What is the cyclic permutation property of the trace for three matrices $A, K, L$?</strong></summary>
-
-$tr(AKL) = tr(KLA) = tr(LAK)$.
+smallest (or least significant)
 
 </details>
 
 <details>
-<summary><strong>The Cholesky decomposition $A = LL^{\top}$ is defined for which class of matrices?</strong></summary>
+<summary><strong>In the Stonehenge image example, what was the approximate data reduction percentage for a rank-5 SVD approximation?</strong></summary>
 
-Symmetric, positive definite matrices.
-
-</details>
-
-<details>
-<summary><strong>What are the components of the Singular Value Decomposition (SVD) of a matrix $A$?</strong></summary>
-
-$A = U \Sigma V^{\top}$, where $U$ and $V$ are orthogonal and $\Sigma$ is a diagonal matrix of singular values.
+Approximately $0.6\%$ of the original image size.
 
 </details>
 
 <details>
-<summary><strong>In SVD, what do the columns of $U$ and $V$ represent?</strong></summary>
+<summary><strong>What is the primary motivation for using Cholesky decomposition in deep stochastic models like Variational Auto-encoders (VAEs)?</strong></summary>
 
-$U$ contains the left-singular vectors and $V$ contains the right-singular vectors.
-
-</details>
-
-<details>
-<summary><strong>How are the nonzero singular values $\sigma_i$ of $A$ related to the eigenvalues of $A^{\top}A$?</strong></summary>
-
-The singular values are the square roots of the nonzero eigenvalues of $A^{\top}A$.
+To perform a linear transformation of random variables for computing gradients.
 
 </details>
 
 <details>
-<summary><strong>What makes the SVD more flexible than the eigendecomposition?</strong></summary>
+<summary><strong>If $A \in \mathbb{R}^{m \times n}$, what are the dimensions of the singular value matrix $\Sigma$ in the full SVD?</strong></summary>
 
-SVD exists for all matrices (including non-square), whereas eigendecomposition requires a square, non-defective matrix.
-
-</details>
-
-<details>
-<summary><strong>According to the Eckart-Young theorem, how is the best rank-$k$ approximation of a matrix $A$ obtained?</strong></summary>
-
-By truncating the SVD to the top $k$ singular values (truncated SVD).
+$m \times n$.
 
 </details>
 
 <details>
-<summary><strong>What is the primary objective of Principal Component Analysis (PCA)?</strong></summary>
+<summary><strong>The homogeneous system $(A - \lambda I)x = 0$ having a non-trivial solution is equivalent to saying $\text{rank}(A - \lambda I) &lt; \dots$?</strong></summary>
 
-To find a lower-dimensional representation that maximizes the variance of the projected data.
-
-</details>
-
-<details>
-<summary><strong>In PCA, the principal components correspond to which specific vectors of the data covariance matrix $S$?</strong></summary>
-
-The eigenvectors associated with the largest eigenvalues.
+$n$ (where $A$ is $n \times n$).
 
 </details>
 
 <details>
-<summary><strong>How is the variance lost during PCA data compression calculated?</strong></summary>
+<summary><strong>True or False: If $x$ is an eigenvector of $A$ with eigenvalue $\lambda$, then $x$ is also an eigenvector of $A^2$ with eigenvalue $\lambda^2$.</strong></summary>
 
-It is the sum of the eigenvalues associated with the discarded principal components.
-
-</details>
-
-<details>
-<summary><strong>What is the relationship between PCA and the reconstruction error?</strong></summary>
-
-PCA finds the subspace that minimizes the average squared reconstruction error.
+True.
 
 </details>
 
 <details>
-<summary><strong>In the context of SVMs, what is a &#x27;Separating Hyperplane&#x27;?</strong></summary>
+<summary><strong>In the Cholesky factorization $A = LL^\top$, $L$ is a _____ triangular matrix.</strong></summary>
 
-An affine subspace that partitions the feature space into two halves corresponding to different classes.
-
-</details>
-
-<details>
-<summary><strong>What is the &#x27;Kernel Trick&#x27; in machine learning?</strong></summary>
-
-Computing inner products in a high-dimensional feature space implicitly using a kernel function $k(x_i, x_j)$.
+lower
 
 </details>
 
 <details>
-<summary><strong>Define &#x27;Linear Combination&#x27; in a vector space $V$.</strong></summary>
+<summary><strong>How does SVD quantify the change in geometry between vector spaces $V$ and $W$ under a linear mapping $\Phi$?</strong></summary>
 
-A vector $v = \sum_{i=1}^{k} \lambda_i x_i$, where $x_i \in V$ and $\lambda_i$ are real scalars.
-
-</details>
-
-<details>
-<summary><strong>A set of vectors is &#x27;linearly dependent&#x27; if what condition regarding the zero vector is met?</strong></summary>
-
-There exists a non-trivial linear combination (not all scalars zero) that equals the zero vector.
+By decomposing the mapping into rotations (orthogonal matrices) and scaling (singular values).
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;Span&#x27; of a set of vectors $A$?</strong></summary>
+<summary><strong>What happens to the singular values $\sigma_i$ of a matrix $A$ if the matrix is multiplied by a scalar $c &gt; 0$?</strong></summary>
 
-The set of all possible linear combinations of the vectors in $A$.
-
-</details>
-
-<details>
-<summary><strong>If $U$ is a subspace of $V$, what is the relationship between their dimensions?</strong></summary>
-
-$dim(U) \le dim(V)$, with equality only if $U = V$.
+They are all multiplied by $c$.
 
 </details>
 
 <details>
-<summary><strong>In the SVD transformation sequence, what operation does the matrix $V^{\top}$ perform first?</strong></summary>
+<summary><strong>The sum $\sum_{i=1}^r \sigma_i u_i v_i^\top$ is called the _____ expansion of matrix $A$.</strong></summary>
 
-A change of basis in the domain $\mathbb{R}^n$.
-
-</details>
-
-<details>
-<summary><strong>What is an &#x27;Automorphism&#x27;?</strong></summary>
-
-A bijective linear mapping from a space to itself.
+outer-product (or SVD)
 
 </details>
 
 <details>
-<summary><strong>In a coordinate system, what are the &#x27;coordinates&#x27; of a vector $x$ relative to an ordered basis $B = (b_1, \dots, b_n)$?</strong></summary>
+<summary><strong>If a square matrix $A$ is invertible, how can its eigenvalues be related to the eigenvalues of $A^{-1}$?</strong></summary>
 
-The unique scalars $\alpha_1, \dots, \alpha_n$ such that $x = \sum \alpha_i b_i$.
-
-</details>
-
-<details>
-<summary><strong>Under what condition is a linear mapping $\Phi$ injective?</strong></summary>
-
-If and only if its kernel consists solely of the zero vector ($ker(\Phi) = \{0_V\}$).
+The eigenvalues of $A^{-1}$ are the reciprocals ($1/\lambda_i$) of the eigenvalues of $A$.
 
 </details>
 
 <details>
-<summary><strong>Formula: Determinant of the product of two square matrices $A$ and $B$.</strong></summary>
+<summary><strong>In the Cholesky factor $L$, the entry $l_{21}$ is calculated as $a_{21} / \dots$.</strong></summary>
 
-$det(AB) = det(A)det(B)$.
-
-</details>
-
-<details>
-<summary><strong>What does the &#x27;rank-nullity theorem&#x27; imply about the dimensions of the kernel and image of $\Phi: V \to W$?</strong></summary>
-
-$dim(V) = dim(ker(\Phi)) + dim(Im(\Phi))$.
+$l_{11}$
 
 </details>
 
 <details>
-<summary><strong>How does the Cholesky decomposition facilitate efficient determinant calculation?</strong></summary>
+<summary><strong>The process of approximating a high-rank matrix with a lower-rank one to filter out noise is called _____ filtering.</strong></summary>
 
-$det(A) = det(L)^2$, which is the square of the product of the diagonal entries of the triangular matrix $L$.
-
-</details>
-
-<details>
-<summary><strong>Why is array-based &#x27;element-wise&#x27; multiplication rarely used in standard linear algebra compared to matrix multiplication?</strong></summary>
-
-It does not follow standard matrix multiplication rules and has mismatched dimensions when vectors are treated as $n \times 1$ matrices.
+noise
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;Spectral Theorem&#x27; regarding symmetric matrices?</strong></summary>
+<summary><strong>In SVD, the orthogonal matrix $V$ corresponds to the orthonormal eigenbasis of which matrix?</strong></summary>
 
-It states that symmetric matrices can be diagonalized by an orthonormal basis of eigenvectors.
+$A^\top A$.
 
 </details>
 
 <details>
-<summary><strong>What is the &#x27;null space&#x27; of a matrix $A$ in terms of linear equations?</strong></summary>
+<summary><strong>True or False: The Singular Value Decomposition is unique for every matrix.</strong></summary>
 
-The set of all solutions to the homogeneous system $Ax = 0$.
+False (singular values are unique, but singular vectors are not necessarily unique).
+
+</details>
+
+<details>
+<summary><strong>A symmetric matrix is positive definite if all its _____ are strictly positive.</strong></summary>
+
+eigenvalues
+
+</details>
+
+<details>
+<summary><strong>What is the term for the computational technique that calculates gradients of complex functions automatically?</strong></summary>
+
+Automatic Differentiation.
+
+</details>
+
+<details>
+<summary><strong>In a diagonal matrix $D$, what is the inverse $D^{-1}$ if any $d_{ii} \ne 0$?</strong></summary>
+
+A diagonal matrix with entries $1/d_{ii}$.
+
+</details>
+
+<details>
+<summary><strong>The error $\|A - \hat{A}(k)\|_2$ in the spectral norm is equal to the _____ singular value.</strong></summary>
+
+$(k+1)$-th
+
+</details>
+
+<details>
+<summary><strong>For any matrix $A$, the product $A^\top A$ is always symmetric and positive _____.</strong></summary>
+
+semidefinite
+
+</details>
+
+<details>
+<summary><strong>Which decomposition is specifically designed to handle the square-root equivalent for symmetric, positive definite matrices?</strong></summary>
+
+Cholesky decomposition.
+
+</details>
+
+<details>
+<summary><strong>The trace of a square matrix is equal to the _____ of its eigenvalues.</strong></summary>
+
+sum
+
+</details>
+
+<details>
+<summary><strong>The determinant of a square matrix is equal to the _____ of its eigenvalues.</strong></summary>
+
+product
+
+</details>
+
+<details>
+<summary><strong>In SVD, the singular values $\sigma_i$ are always _____.</strong></summary>
+
+non-negative ($\ge 0$).
+
+</details>
+
+<details>
+<summary><strong>What matrix product yields a symmetric matrix whose eigenvalues are the squares of the singular values of $A$?</strong></summary>
+
+$A^\top A$ (or $AA^\top$).
+
+</details>
+
+<details>
+<summary><strong>If a matrix $A$ is $m \times n$ with $m &lt; n$, at most how many non-zero singular values can it have?</strong></summary>
+
+$m$
+
+</details>
+
+<details>
+<summary><strong>The Cholesky factor $L$ is _____ unique for an SPD matrix.</strong></summary>
+
+unique (provided diagonal elements are positive).
+
+</details>
+
+<details>
+<summary><strong>In SVD, $U$ and $V$ are orthogonal, meaning $U^\top = U^{-1}$ and $V^\top = \dots$?</strong></summary>
+
+$V^{-1}$
+
+</details>
+
+<details>
+<summary><strong>The Spectral Theorem implies that symmetric matrices can be diagonalized by _____ matrices.</strong></summary>
+
+orthogonal
 
 </details>
 
