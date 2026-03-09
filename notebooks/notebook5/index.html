@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://biswarupbiswas.github.io/MA2221/notebooks/notebook5/">
       
       
+        <link rel="prev" href="../SVD_Application/">
+      
+      
+        <link rel="next" href="../../flashcards/linear_algebra/">
       
       
         
@@ -358,8 +362,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -370,11 +376,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -395,7 +401,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -513,6 +519,341 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Plotting (Matplotlib Basics)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction to Plotting (Matplotlib Basics)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-line-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Line Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#with-labels-and-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Labels and Title
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-grid-and-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add Grid and Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-line-and-markers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customize Line and markers:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Curves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-figure-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change Figure Size
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save-figure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Figure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scatter-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scatter Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shade-between-two-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shade Between Two Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bar-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bar Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subplots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subplots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex-in-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LaTeX in Labels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logarithmic-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logarithmic Plots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logarithmic Plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semilog-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semilog-y
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-log-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log-Log Plot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contour-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contour Plot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contour Plot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filled-contour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filled contour:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heatmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heatmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Heatmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-and-display-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read and display image
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-surface-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D Surface Plot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
