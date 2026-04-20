@@ -52,11 +52,13 @@
 }
 
 /* 6. Home page announcements heading */
+.announcements-title,
 .md-typeset .announcements-title {
-    color: #c62828;
+    color: #c62828 !important;
     font-weight: 800;
 }
 
+.update-badge,
 .md-typeset .update-badge {
     display: inline-block;
     margin-left: 0.45rem;
@@ -64,10 +66,11 @@
     border-radius: 999px;
     font-size: 0.65em;
     font-weight: 700;
-    color: #ffffff;
-    background: #d32f2f;
+    color: #ffffff !important;
+    background: #d32f2f !important;
     vertical-align: middle;
     animation: update-blink 1.2s ease-in-out infinite;
+    -webkit-animation: update-blink 1.2s ease-in-out infinite;
 }
 
 @keyframes update-blink {
