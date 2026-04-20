@@ -32,11 +32,18 @@ nav:
   - Syllabus: syllabus.md
   - Lectures: lectures.md
   - Tutorials: tutorials.md
+  - Assignments: assignments.md
   - Notebooks:
       - Lab 1: notebooks/notebook1.ipynb
       - Lab 2: notebooks/notebook2.ipynb
       - Lab 3: notebooks/notebook3.ipynb
-  - Assignments: assignments.md
+      - Lab 4: notebooks/SVD_Application.ipynb
+      - Lab 5: notebooks/notebook5.ipynb
+      - Lab 6: notebooks/GradientsOptimisation.ipynb
+      - Lab 7: notebooks/notebook_DataHandling.ipynb
+      - Lab 8: notebooks/notebook_probability.ipynb
+      - Lab 9: notebooks/notebook_ML_Pipeline.ipynb
+      
   # - Codes: codes.md
   - Flashcards:
       - Linear Algebra: flashcards/linear_algebra.md
