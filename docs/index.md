@@ -1,7 +1,5 @@
 # MA2221 – Foundational Mathematics for Machine Learning
-
----
-## <span class="announcements-title">Announcements</span> <span class="update-badge">New updates</span>
+## 📢 Announcements <span class="update-badge">New updates</span>
 - **Lab 9**: The lab on the Machine Learning Pipeline is now available in the `notebooks/notebook_ML_Pipeline.ipynb` file. You need to submit the completed notebook as lab assignment 3.
 - **Lab 8**: The lab on Probability is now available in the `notebooks/notebook_probability.ipynb` file. You need to submit the completed notebook as lab assignment 2.
 - **Lab 7**: The lab on Data Handling is now available in the `notebooks/notebook_DataHandling.ipynb` file. You need to submit the completed notebook as lab assignment 1.
