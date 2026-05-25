@@ -43,6 +43,8 @@ nav:
       - Lab 7: notebooks/notebook_DataHandling.ipynb
       - Lab 8: notebooks/notebook_probability.ipynb
       - Lab 9: notebooks/notebook_ML_Pipeline.ipynb
+      - Lab 10: notebooks/notebook_PCA.ipynb
+      - SVM: notebooks/hard_margin_svm.ipynb
       
   # - Codes: codes.md
   - Flashcards:

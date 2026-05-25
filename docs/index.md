@@ -5,7 +5,7 @@
 - **Lab 7**: The lab on Data Handling is now available in the `notebooks/notebook_DataHandling.ipynb` file. You need to submit the completed notebook as lab assignment 1.
 
 <video width="750" autoplay muted controls>
-  <source src="videos/NonConvexSlidingBalls.mp4" type="video/mp4">
+  <source src="videos/SVMKernelTrick.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 ---

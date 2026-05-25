@@ -2,74 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/assignments/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/lectures/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/syllabus/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/tutorials/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/flashcards/Norms/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/flashcards/linear_algebra/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/flashcards/matrix_fact/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/GradientsOptimisation/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/SVD_Application/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://biswarupbiswas.github.io/MA2221/notebooks/hard_margin_svm/</loc>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook-pytorch/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook1/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook2/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook3/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook5/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook_DataHandling/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook_ML_Pipeline/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook_PCA/</loc>
+         <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://biswarupbiswas.github.io/MA2221/notebooks/notebook_probability/</loc>
-         <lastmod>2026-04-20</lastmod>
+         <lastmod>2026-05-09</lastmod>
     </url>
 </urlset>

@@ -18,6 +18,10 @@
 | **16** | 15-03-2026 | **Continuos Optimization contd** | [Lecture 16](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQBA32XNXK_1ToDOVvN2qAfJAf48IYVFfrX-e-vWGC3GFAo?e=xFtCMG)
 | **17** | 06-04-2026 | **Model meets data and elements of machine learning** | [Lecture 17](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQA_UmkGtQGORL2bpPbzAchVAQTvVdD798lM1Mn2s8o7lzY?e=igLJBP)
 | **18** | 06-04-2026 | **Probability basics** | [Lecture 18](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQDvoS1kZafuSacJD5JpYq6QAfk4lBcz_V-JbJAeihLG7HM?e=3rU4n2)
+| **19** | 09-05-2026 | **Least square regression** | [Lecture 19](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQDZxKXMPIjOT65V0SO05eUPAWceK3mOjoQEVEJwVhylSEQ?e=hyHL5I)
+| **20** | 09-05-2026 | **PCA** | [Lecture 20](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQCYBtVBh5xKQaAxVCgDcnpWAV33t1gHKPVLtred-T508jU?e=mEjNfC)
+| **21** | 09-05-2026 | **SVM** | [Lecture 21](https://mahindraecolecentrale-my.sharepoint.com/:b:/g/personal/biswarup_biswas_mahindrauniversity_edu_in/IQCjv7NKabfOT5mo71e-cvPxAXrhKplwGJFOdBVoy4fU9ww?e=On34wV)
+
 
 ---
 
