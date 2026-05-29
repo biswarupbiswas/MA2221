@@ -1,4 +1,4 @@
-# Mathematics for Machine Learning  
+# Foundational Mathematics for Machine Learning  
 
 ## PART I — Mathematical Foundations
 
